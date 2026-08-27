@@ -1,0 +1,49 @@
+# @CosmosCrud_HostAddress = http://localhost:5039
+
+# GET {{CosmosCrud_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+
+
+@host = https://localhost:7034
+
+### CREATE USER
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Saumya Sharma",
+  "email": "saumyasharma.adv@gmail.com",
+  "age": 44
+}
+
+### CREATE USER2
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Arpit S",
+  "email": "itssharma6074@gmail.com",
+  "age": 24
+}
+### GET USER BY ID
+GET {{host}}/api/users/
+Accept: application/json
+
+
+### UPDATE USER
+PUT {{host}}/api/users/557c0286-7925-46f1-9daa-3f4d11e5a13d
+Content-Type: application/json
+
+{
+  "name": "Arpit Sharma Updated",
+  "email": "arpit.updated@example.com",
+  "age": 24
+}
+
+### GET UPDATED USER
+GET {{host}}/api/users/557c0286-7925-46f1-9daa-3f4d11e5a13d
+Accept: application/json
+
+### DELETE USER
+DELETE {{host}}/api/users/6fc2c959-68b3-41b8-938e-91129c429dd0
